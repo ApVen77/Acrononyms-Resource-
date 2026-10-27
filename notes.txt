@@ -1,0 +1,46 @@
+      <p>
+
+            Efficiency and Speed
+            Faster communication: Acronyms reduce the number of keystrokes and the time it takes to convey information,
+            especially in fast-paced digital environments. "Acronyms save time, reduce keystrokes, and get the point
+            across ASAP."r/AskReddit
+
+            Streamlined writing: In professional or technical fields, acronyms help condense lengthy terms that would
+            otherwise make documents cumbersome. "I work in aviation and I have to deal with something called the Window
+            of Circadian Low. I am happy to call that a WOCL."r/rant
+            <br>
+            <br>
+            Community and Clarity
+            Shared understanding in niche groups: Within specific communities or professions, acronyms act as a standard
+            shorthand, fostering a common language among those familiar with the subject. "It comes usually with the
+            profession. Casual talk between IT guys, aviation workers or medical pros, even plumbers - and so on, can be
+            gibberish for someone not familar with the topic."r/NoStupidQuestions
+            <br>
+            <br>
+            Improved readability in some cases: For terms that are excessively long or frequently repeated, an
+            established acronym can make text more readable once introduced. "I promise you, this is definitely bad
+            advice for my job. You're going to feel much more confused when I talk about Light Amplification by
+            Stimulated Emission of Radiation than if I had just used an acronym."r/LifeProTips
+            <br>
+            <br>
+            Potential Drawbacks
+            Exclusion and confusion: Over-reliance on acronyms, especially obscure ones, can exclude those unfamiliar
+            with the jargon and lead to misinterpretation. "The ones that bug me are the hyper-specific acronyms for
+            niche hobbies, saw a thread once where every second word was an abbreviation and I had zero clue what was
+            happening"r/AskReddit
+
+            Ambiguity: Some acronyms can have multiple meanings, requiring context or clarification to avoid confusion.
+            "Ex: SOB in healthcare ís short if breath. To a lot of the world it is son of a B—-"r/rant
+
+        </p>
+
+        <section>
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Download</a>
+        </div>
+    </section>
