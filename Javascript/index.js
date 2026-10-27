@@ -170,7 +170,10 @@ const categoryContent = {
       { acronym: "OB/GYN", meaning: "Obstetrics and Gynecology" },
       { acronym: "NICU", meaning: "Neonatal Intensive Care Unit" },
       { acronym: "PICU", meaning: "Pediatric Intensive Care Unit" },
-      { acronym: "HIPAA", meaning: "Health Insurance Portability and Accountability Act" },
+      {
+        acronym: "HIPAA",
+        meaning: "Health Insurance Portability and Accountability Act",
+      },
       { acronym: "HMO", meaning: "Health Maintenance Organization" },
       { acronym: "PPO", meaning: "Preferred Provider Organization" },
       { acronym: "EOB", meaning: "Explanation of Benefits" },
@@ -232,8 +235,14 @@ const categoryContent = {
       { acronym: "FICO", meaning: "Fair Isaac Corporation credit score" },
       { acronym: "IRA", meaning: "Individual Retirement Account" },
       { acronym: "401(k)", meaning: "Employer-sponsored retirement plan" },
-      { acronym: "403(b)", meaning: "Retirement plan commonly used by certain nonprofits/schools" },
-      { acronym: "457(b)", meaning: "Government/nonprofit deferred compensation plan" },
+      {
+        acronym: "403(b)",
+        meaning: "Retirement plan commonly used by certain nonprofits/schools",
+      },
+      {
+        acronym: "457(b)",
+        meaning: "Government/nonprofit deferred compensation plan",
+      },
       { acronym: "HSA", meaning: "Health Savings Account" },
       { acronym: "FSA", meaning: "Flexible Spending Account" },
       { acronym: "CD", meaning: "Certificate of Deposit" },
@@ -268,7 +277,10 @@ const categoryContent = {
       { acronym: "ACH", meaning: "Automated Clearing House" },
       { acronym: "CVV", meaning: "Card Verification Value" },
       { acronym: "BIN", meaning: "Bank Identification Number" },
-      { acronym: "PCI DSS", meaning: "Payment Card Industry Data Security Standard" },
+      {
+        acronym: "PCI DSS",
+        meaning: "Payment Card Industry Data Security Standard",
+      },
       { acronym: "FDIC", meaning: "Federal Deposit Insurance Corporation" },
       { acronym: "CRA", meaning: "Credit Reporting Agency" },
       { acronym: "CFPB", meaning: "Consumer Financial Protection Bureau" },
@@ -359,7 +371,10 @@ const categoryContent = {
       { acronym: "BBB", meaning: "Better Business Bureau" },
       { acronym: "CDC", meaning: "Centers for Disease Control and Prevention" },
       { acronym: "FDA", meaning: "Food and Drug Administration" },
-      { acronym: "NAACP", meaning: "National Association for the Advancement of Colored People" },
+      {
+        acronym: "NAACP",
+        meaning: "National Association for the Advancement of Colored People",
+      },
       { acronym: "NRA", meaning: "National Rifle Association" },
       { acronym: "YMCA", meaning: "Young Men's Christian Association" },
       { acronym: "YWCA", meaning: "Young Women's Christian Association" },
@@ -399,6 +414,60 @@ const categoryContent = {
   },
 };
 
+//Add a carousel of acronyms
+const acronyms = [
+  "WOW",
+  "OMG",
+  "ER",
+  "ESPN",
+  "DIY",
+  "BTW",
+  "AI",
+  "FBI",
+  "CNN",
+  "COTESOL",
+  "ADHD",
+  "NGO",
+  "PD",
+  "BRB",
+  "PB&J",
+  "ASAP",
+  "CU",
+  "YOLO",
+  "NBA",
+  "USA",
+  "RIP",
+  "AAA",
+  "NFL",
+];
+
+let currentIndex = 0;
+const carouselElement = document.getElementById("carousel");
+
+function updateCarousel() {
+  if (carouselElement) {
+    // Add slide-out animation
+    carouselElement.classList.add("carousel-slide-out");
+    carouselElement.classList.remove("carousel-slide-in");
+
+    // Wait for slide-out to complete, then change text and slide in
+    setTimeout(() => {
+      carouselElement.textContent = acronyms[currentIndex];
+      currentIndex = (currentIndex + 1) % acronyms.length;
+
+      carouselElement.classList.remove("carousel-slide-out");
+      carouselElement.classList.add("carousel-slide-in");
+    }, 500);
+  }
+}
+
+// Start carousel after 5 seconds, then update every 2.5 seconds
+setTimeout(() => {
+  carouselElement.textContent = acronyms[currentIndex];
+  carouselElement.classList.add("carousel-slide-in");
+  currentIndex = (currentIndex + 1) % acronyms.length;
+  setInterval(updateCarousel, 2500);
+}, 5000);
 // Add click functionality to all .coins elements
 document.querySelectorAll(".coins").forEach((coin) => {
   coin.style.cursor = "pointer";

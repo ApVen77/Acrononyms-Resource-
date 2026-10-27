@@ -370,6 +370,48 @@ header > p {
     font-family: 'Georgia', 'Times New Roman', serif;
 }
 
+#carousel {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    padding: 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.carousel-slide-in {
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+.carousel-slide-out {
+    animation: slideOutLeft 0.5s ease-out forwards;
+}
+
 .coins {
     font-size: 13px;
     text-align: center;
@@ -417,6 +459,7 @@ footer {
     padding: var(--spacing-lg) 0;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
     border-top: 3px solid var(--accent);
+    margin-top: 60px;
 }
 
 .footer-content {
@@ -491,10 +534,27 @@ footer p {
     margin-top: var(--spacing-lg);
     font-family: 'Georgia', 'Times New Roman', serif;
     font-style: italic;
+    line-height: 1.5;
+    vertical-align: middle;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    header > p {
+        font-size: 0.95rem;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
     .nav {
         top: 10px;
         right: 10px;
@@ -529,6 +589,11 @@ footer p {
         font-size: 14px;
     }
 
+    footer {
+        padding: var(--spacing-md) 0;
+        margin-top: 40px;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -539,9 +604,25 @@ footer p {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    footer p {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: var(--spacing-sm) var(--spacing-xs);
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    header > p {
+        font-size: 0.85rem;
+    }
+
     .nav {
         top: 5px;
         right: 5px;
@@ -566,5 +647,14 @@ footer p {
     .img1 {
         width: 150px;
         height: 150px;
+    }
+
+    footer {
+        padding: var(--spacing-sm) 0;
+        margin-top: 30px;
+    }
+
+    footer p {
+        font-size: 11px;
     }
 }
