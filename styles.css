@@ -249,6 +249,7 @@ header > p {
     font-style: italic;
     position: relative;
     z-index: 1;
+   
 }
 
 .jumbotron hr {
@@ -589,6 +590,12 @@ footer p {
         font-size: 14px;
     }
 
+    #carousel {
+        font-size: 1.5rem;
+        padding: 15px;
+        min-height: 50px;
+    }
+
     footer {
         padding: var(--spacing-md) 0;
         margin-top: 40px;
@@ -597,12 +604,28 @@ footer p {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: var(--spacing-md);
+    }
+
+    footer img {
+        width: 50px;
+        height: 50px;
     }
 
     .footer-links {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
 
     footer p {
@@ -644,6 +667,12 @@ footer p {
         margin: 5px 6px;
     }
 
+    #carousel {
+        font-size: 1.2rem;
+        padding: 10px;
+        min-height: 40px;
+    }
+
     .img1 {
         width: 150px;
         height: 150px;
@@ -652,6 +681,19 @@ footer p {
     footer {
         padding: var(--spacing-sm) 0;
         margin-top: 30px;
+    }
+
+    footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 10px;
     }
 
     footer p {

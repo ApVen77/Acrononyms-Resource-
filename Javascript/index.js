@@ -468,6 +468,30 @@ setTimeout(() => {
   currentIndex = (currentIndex + 1) % acronyms.length;
   setInterval(updateCarousel, 2500);
 }, 5000);
+
+// Download page functionality
+document.querySelector(".btn-primary").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Get the current page HTML
+  const htmlContent = document.documentElement.outerHTML;
+
+  // Create a blob with the HTML content
+  const blob = new Blob([htmlContent], { type: "text/html" });
+
+  // Create a download link
+  const downloadLink = document.createElement("a");
+  downloadLink.href = URL.createObjectURL(blob);
+  downloadLink.download = "US-American-Acronyms.html";
+
+  // Trigger the download
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+
+  // Clean up the URL object
+  URL.revokeObjectURL(downloadLink.href);
+});
 // Add click functionality to all .coins elements
 document.querySelectorAll(".coins").forEach((coin) => {
   coin.style.cursor = "pointer";
