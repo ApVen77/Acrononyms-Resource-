@@ -102,7 +102,7 @@ body {
         transparent 100%);
 }
 
-.book-page p:first-of-type::first-letter {
+.lead::first-letter {
     float: left;
     font-size: 4.5rem;
     line-height: 0.8;
